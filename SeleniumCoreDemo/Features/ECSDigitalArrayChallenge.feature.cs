@@ -75,11 +75,11 @@ namespace SeleniumCoreDemo.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Digital Challenge Balanced Array row index")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("ECSDigital")]
         public virtual void VerifyDigitalChallengeBalancedArrayRowIndex()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "ECSDigital"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Digital Challenge Balanced Array row index", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
@@ -126,11 +126,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Validate Error message for submission of invalid data")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("ECSDigital")]
         public virtual void ValidateErrorMessageForSubmissionOfInvalidData()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "ECSDigital"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Error message for submission of invalid data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 14
@@ -159,14 +159,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 16
  testRunner.And("I have clicked on Render the Challenge button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 19
+#line 17
  testRunner.Then("I have clicked on Submit Answers button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Message"});
                 table1.AddRow(new string[] {
                             "It looks like your answer wasn\'t quite right"});
-#line 20
+#line 18
  testRunner.Then("I should see below unsuccessful message", ((string)(null)), table1, "Then ");
 #line hidden
             }
