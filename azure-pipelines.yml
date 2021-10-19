@@ -6,8 +6,11 @@
 trigger:
 - master
 
+# use a Windows agent with VS to build the .NET Core MSTest project
+# you can replace this with Ubuntu too without changing the tasks
 pool:
-  vmImage: 'windows-latest'
+  name: Hosted Windows 2019 with VS2019
+
 
 variables:
   solution: '**/*.sln'
@@ -15,12 +18,19 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
+# install the required .NET Core SDK version
+# only necessary if the agent doesn't already have the required SDK
+- task: DotNetCoreInstaller@0
+  displayName: 'Use .NET Core sdk 3.1.0'
   inputs:
-    restoreSolution: '$(solution)'
+    version: 3.1.0
 
+# restore Nuget packages/dependencies
+- task: DotNetCoreCLI@2
+  displayName: Restore
+  inputs:
+    command: restore
+    projects: '**/SeleniumCoreDemo/SeleniumCoreDemo.csproj'
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
