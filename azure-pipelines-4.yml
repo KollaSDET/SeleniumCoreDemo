@@ -31,7 +31,7 @@ steps:
   displayName: 'Run Automated Tests'
   inputs:
     testAssemblyVer2: |
-     **\$(BuildConfiguration)\*Specs*.dll
+     **\$(BuildConfiguration)\*.dll
      **\$(BuildConfiguration)\**\*test*.dll
      !**\*Microsoft.VisualStudio.TestPlatform*
      !**\obj\**
