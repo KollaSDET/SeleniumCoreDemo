@@ -19,7 +19,14 @@
     
 
   <ItemGroup>
+    <Compile Remove="Pages\HomePage.cs" />
     <Compile Remove="UnitTest1.cs" />
+  </ItemGroup>
+    
+
+  <ItemGroup>
+    <None Remove="resultfile.txt" />
+    <None Remove="test.bat" />
   </ItemGroup>
 
 

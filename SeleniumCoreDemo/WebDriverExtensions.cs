@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -11,7 +9,8 @@ namespace SeleniumCoreDemo
 
         {
 
-            public static IWebElement FindElement(this IWebDriver driver, By by, int timeoutInSeconds)
+       
+        public static IWebElement Find(this IWebDriver driver, By by, int timeoutInSeconds)
 
             {
 
